@@ -22,6 +22,23 @@ class Personne(DateNaissance):
         print("Prénom: "+str(self.prenom))
         print("Date de naissance: " + self.dateNaissance.ToString())
 
+class Employer(Personne):
+    def __init__(self,Personne, salaire):
+        self.salaire = salaire
+        self.personne = Personne
+    
+    def afficher(self):
+        self.personne.afficher()
+        print("Salaire: " + str(self.salaire))
+        
+class Chef(Employer):
+    def __init__(self, Employer, Service):
+        self.employer = Employer
+        self.service = Service
+    
+    def afficher(self):
+        self.employer.afficher()
+        print("Service: " + str(self.service))
 
-P = Personne("Ilyass","Math",DateNaissance(1,7,1982))
+P = Chef(Employer((Personne("Ilyass","Math",DateNaissance(1,7,1982))),7856),"Ressource humaine")
 P.afficher()
