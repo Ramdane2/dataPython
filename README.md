@@ -71,6 +71,11 @@ ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD ["jupyter", "notebook", "--port=8000", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
 ```
 
+### Build image
+```
+$ docker build -t name-container .
+```
+
 ## Uninstall Docker Engine
 Uninstall the Docker Engine, CLI, and Containerd packages:
 ```
