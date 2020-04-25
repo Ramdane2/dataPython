@@ -52,6 +52,7 @@ WORKDIR src/
 COPY . .
 RUN pip3 install -r requirements.txt
 RUN pip3 install jupyter
+RUN pip3 install Flask
 RUN python3 module.py
 RUN rm /src/data/raw_data.csv
 WORKDIR /src/notebooks
