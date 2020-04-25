@@ -85,4 +85,27 @@ $ sudo apt-get purge docker-ce docker-ce-cli containerd.io
 ```
 
 ## Start framework Flask on google cloud VM
+copy index.py in your repository
+```
+from flask import Flask
+import json
 
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Hello world !"
+
+@app.route('/books')
+def books():
+    listBook = ''
+    with open('./books.json') as json_file:
+        data = json.load(json_file)
+        for p in data:
+            listBook += 'Titre: ' + p['title'] + '\n'
+    return listBook
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
+ ```
