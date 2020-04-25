@@ -85,6 +85,13 @@ $ sudo apt-get purge docker-ce docker-ce-cli containerd.io
 ```
 
 ## Start framework Flask on google cloud VM
+Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
+
+Flask offers suggestions, but doesn't enforce any dependencies or project layout. It is up to the developer to choose the tools and libraries they want to use. There are many extensions provided by the community that make adding new
+
+### config firewall on google cloud
+![Image description](link-to-image)
+
 copy index.py in your repository
 ```
 from flask import Flask
@@ -109,3 +116,10 @@ def books():
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
  ```
+ 
+Run script
+````
+python3 index.py
+````
+
+
