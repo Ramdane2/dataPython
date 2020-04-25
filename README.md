@@ -90,7 +90,7 @@ Flask is a lightweight WSGI web application framework. It is designed to make ge
 Flask offers suggestions, but doesn't enforce any dependencies or project layout. It is up to the developer to choose the tools and libraries they want to use. There are many extensions provided by the community that make adding new
 
 ### config firewall on google cloud
-![Image description](link-to-image)
+![Instance]()
 
 copy index.py in your repository
 ```
