@@ -10,6 +10,27 @@ Loosely coupled: Containers are highly self sufficient and encapsulated, allowin
 Scalable: You can increase and automatically distribute container replicas across a datacenter.
 Secure: Containers apply aggressive constraints and isolations to processes without any configuration required on the part of the user.
 
+## Get started
+Install Docker on Ubuntu
+
+### Uninstall old versions
+Older versions of Docker were called docker, docker.io, or docker-engine. If these are installed, uninstall them:
+```
+$ sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+
+### SET UP THE REPOSITORY
+Update the apt package index and install packages to allow apt to use a repository over HTTPS:
+```
+$ sudo apt-get update
+
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+```
 ## Dockerfile
 ```
 FROM ubuntu:latest
