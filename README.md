@@ -61,7 +61,6 @@ RUN pip3 install -r requirements.txt
 RUN pip3 install jupyter
 RUN pip3 install Flask
 RUN python3 module.py
-RUN rm /src/data/raw_data.csv
 WORKDIR /src/notebooks
 # Add Tini. Tini operates as a process subreaper for jupyter. This prevents kernel crashes.
 ENV TINI_VERSION v0.6.0
@@ -73,11 +72,17 @@ CMD ["jupyter", "notebook", "--port=8000", "--no-browser", "--ip=0.0.0.0", "--al
 
 ### Build image
 ```
-$ docker build -t name-container .
+$ docker build -t container-name .
 ```
-
+### Run container
+```
+$ docker run -d -p 8000:8888 container-name
+```
 ## Uninstall Docker Engine
-Uninstall the Docker Engine, CLI, and Containerd packages:
+If you want uninstall the Docker Engine, CLI, and Containerd packages:
 ```
 $ sudo apt-get purge docker-ce docker-ce-cli containerd.io
 ```
+
+## Start framework Flask on google cloud VM
+
