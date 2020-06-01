@@ -60,7 +60,7 @@ def predict():
 	print(bmi)
 	model = pickle.load(open('model.pkl','rb'))
 	result = model.predict([[smoker,age,bmi]])
-	return render_template('index.html', prediction_text='L\'assurance réserve une somme de  {}$ pour vous '.format(round(result[0],2)))
+	return render_template('index.html', prediction_text='L\'assurance réserve une somme de  {} $'.format(round(result[0],2)))
 
 @app.route('/')
 def index():
