@@ -12,13 +12,8 @@ pycrypto==2.6.1
 pyOpenSSL==17.5.0
 pyparsing==2.4.7
 pyserial==3.4
-requests==2.18.4
-requests-unixsocket==0.1.5
 scikit-learn==0.23.1
 scipy==1.4.1
 seaborn==0.10.1
 six==1.15.0
 sklearn==0.0
-ssh-import-id==5.7
-systemd-python==234
-threadpoolctl==2.1.0
