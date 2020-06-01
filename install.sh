@@ -6,3 +6,6 @@ cd /tmp
 sudo curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 sudo bash Anaconda3-2019.03-Linux-x86_64.sh
 sudo source ~/.bashrc
+sudo git clone https://github.com/Ramdane2/dataPython.git
+cd dataPython
+sudo python3 app.py
